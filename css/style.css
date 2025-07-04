@@ -1,0 +1,110 @@
+/* css/style.css */
+
+/* Custom font import for Inter - applied globally */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Light blue-gray background */
+}
+
+/* Smooth scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom styles for form elements if needed, though Tailwind handles most */
+/* Example: Focus state for inputs, if not fully covered by Tailwind's focus:ring */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Blue-500 with transparency */
+}
+
+/* Specific styling for the header banner on the home page to match mockup feel */
+.hero-banner {
+    background-image: url('https://placehold.co/1366x576/4a90e2/ffffff?text=YourCompany+Banner'); /* Placeholder for mockup banner */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust height as needed for mockup feel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 1rem 1rem; /* Rounded bottom corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for text readability */
+    border-radius: 0 0 1rem 1rem;
+}
+
+.hero-banner h1, .hero-banner p {
+    z-index: 10; /* Ensure text is above overlay */
+}
+
+/* Styles for the headquarter circles */
+.headquarter-circle {
+    width: 120px; /* Adjusted size for better visual */
+    height: 120px;
+    border-radius: 50%;
+    background-color: #e2e8f0; /* Light gray background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #475569; /* Slate-600 */
+    border: 2px solid #cbd5e1; /* Slate-300 border */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.headquarter-circle:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #dbeafe; /* Blue-100 */
+    border-color: #93c5fd; /* Blue-300 */
+}
+
+/* Styles for the form output box */
+#form-output {
+    border: 1px solid #e2e8f0; /* Light gray border */
+    background-color: #f0f4f8; /* Light blue-gray background */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .headquarter-circle {
+        width: 100px;
+        height: 100px;
+    }
+    .hero-banner {
+        height: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .headquarter-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 0.875rem; /* text-sm */
+    }
+    .hero-banner h1 {
+        font-size: 2.25rem; /* text-4xl */
+    }
+    .hero-banner p {
+        font-size: 1.125rem; /* text-lg */
+    }
+}
