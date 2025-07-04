@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 userName = "Guest"; // If not on home page, default to Guest
             }
         }
-        welcomeMessageElement.textContent = `Hi ${userName}, Welcome To Website`;
+        welcomeMessageElement.textContent = `Hi ${userName}, 你好！`;
     }
 
     // --- Form Validation and Display Logic (for index.html) ---
@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (isValid) {
                 // Display submitted values
-                outputName.textContent = nameInput.value.trim();
-                outputEmail.textContent = emailInput.value.trim();
+                outputName.textContent = nameInput.value.trim() === '';
+                outputEmail.textContent = emailInput.value.trim() ;
                 outputPhone.textContent = phoneInput.value.trim() || 'N/A'; // Display N/A if phone is empty
                 outputDob.textContent = dobInput.value.trim();
                 outputGender.textContent = selectedGender;

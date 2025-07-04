@@ -24,7 +24,7 @@ select:focus {
 
 /* Specific styling for the header banner on the home page to match mockup feel */
 .hero-banner {
-    background-image: url('https://placehold.co/1366x576/4a90e2/ffffff?text=YourCompany+Banner'); /* Placeholder for mockup banner */
+    background-image: url('"https://placehold.co/1366x576/4a90e2/ffffff?text=Learn Chinese with Kezya+Banner'"); /* Placeholder for mockup banner */
     background-size: cover;
     background-position: center;
     height: 300px; /* Adjust height as needed for mockup feel */
